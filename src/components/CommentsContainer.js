@@ -96,8 +96,8 @@ const Comment = ({ data }) => {
 
 const CommentsList = ({ commentsData }) => {
   return commentsData.map((comment, idx) => (
-    <div>
-      <Comment data={comment} key={idx} />
+    <div key={idx}>
+      <Comment data={comment} />
       <div className='pl-5 ml-5 border border-l-black '>
         <CommentsList commentsData={comment.replies} key={idx} />
       </div>
